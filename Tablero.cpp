@@ -53,8 +53,53 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual-=espacios;
                         matriz[filaActual][columnaActual] = '+';
                         //Arriba
-                        
-
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -65,6 +110,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual+=2;
                         filaActual-=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -81,6 +174,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual--;
                         filaActual+=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -91,6 +232,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual-=2;
                         filaActual+=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -107,6 +296,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         columnaActual++;
                         columnaActual-=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -117,6 +354,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         columnaActual+=2;
                         columnaActual-=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -133,6 +418,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         columnaActual--;
                         columnaActual+=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -143,6 +476,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         columnaActual-=2;
                         columnaActual+=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -162,6 +543,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual-=espacios;
                         columnaActual-=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -175,6 +604,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual-=espacios;
                         columnaActual-=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -194,6 +671,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual+=espacios;
                         columnaActual-=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -207,6 +732,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual+=espacios;
                         columnaActual-=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -226,6 +799,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual-=espacios;
                         columnaActual+=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -239,6 +860,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual-=espacios;
                         columnaActual+=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -258,6 +927,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual+=1;
                         columnaActual+=1;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -271,6 +988,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual+=espacios;
                         columnaActual+=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '#') {
+                                matriz[filaActual-1][columnaActual] = '+';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '#') {
+                                matriz[filaActual+1][columnaActual] = '+';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '#') {
+                                matriz[filaActual][columnaActual-1] = '+';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '#') {
+                                matriz[filaActual][columnaActual+1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '#') {
+                                matriz[filaActual-1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '#') {
+                                matriz[filaActual+1][columnaActual - 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '#') {
+                                matriz[filaActual-1][columnaActual + 1] = '+';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '#') {
+                                matriz[filaActual + 1][columnaActual + 1] = '+';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -309,6 +1074,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual++;
                         filaActual-=espacios;
                         matriz[filaActual][columnaActual] = '#';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -319,6 +1132,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual+=2;
                         filaActual-=espacios;
                         matriz[filaActual][columnaActual] = '#';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -335,6 +1196,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual--;
                         filaActual+=espacios;
                         matriz[filaActual][columnaActual] = '#';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -345,6 +1254,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual-=2;
                         filaActual+=espacios;
                         matriz[filaActual][columnaActual] = '#';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -361,6 +1318,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         columnaActual++;
                         columnaActual-=espacios;
                         matriz[filaActual][columnaActual] = '#';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -371,6 +1376,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         columnaActual+=2;
                         columnaActual-=espacios;
                         matriz[filaActual][columnaActual] = '#';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -387,6 +1440,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         columnaActual--;
                         columnaActual+=espacios;
                         matriz[filaActual][columnaActual] = '#';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -397,6 +1498,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         columnaActual-=2;
                         columnaActual+=espacios;
                         matriz[filaActual][columnaActual] = '#';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -416,6 +1565,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual-=espacios;
                         columnaActual-=espacios;
                         matriz[filaActual][columnaActual] = '#';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -429,6 +1626,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual-=espacios;
                         columnaActual-=espacios;
                         matriz[filaActual][columnaActual] = '#';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -448,6 +1693,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual+=espacios;
                         columnaActual-=espacios;
                         matriz[filaActual][columnaActual] = '#';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -461,6 +1754,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual+=espacios;
                         columnaActual-=espacios;
                         matriz[filaActual][columnaActual] = '#';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -480,6 +1821,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual-=espacios;
                         columnaActual+=espacios;
                         matriz[filaActual][columnaActual] = '#';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -493,6 +1882,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual-=espacios;
                         columnaActual+=espacios;
                         matriz[filaActual][columnaActual] = '#';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -512,6 +1949,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual+=1;
                         columnaActual+=1;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
@@ -525,6 +2010,54 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual+=espacios;
                         columnaActual+=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        if (filaActual - 1 >= 0) {
+                            if (matriz[filaActual-1][columnaActual] == '+') {
+                                matriz[filaActual-1][columnaActual] = '#';
+                            }
+                        }
+                        //abajo
+                        if (filaActual + 1 <= 10) {
+                            if (matriz[filaActual+1][columnaActual] == '+') {
+                                matriz[filaActual+1][columnaActual] = '#';
+                            }
+                        }
+                        //Izquierda
+                        if (columnaActual - 1 >= 0) {
+                            if (matriz[filaActual][columnaActual-1] == '+') {
+                                matriz[filaActual][columnaActual-1] = '#';
+                            }
+                        }
+                        //Derecha
+                        if (columnaActual + 1 <= 10) {
+                            if (matriz[filaActual][columnaActual+1] == '+') {
+                                matriz[filaActual][columnaActual+1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual-1][columnaActual - 1] == '+') {
+                                matriz[filaActual-1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Izquierda Abajo
+                        if ((filaActual + 1 <= 10) && (columnaActual - 1 >= 0)) {
+                            if (matriz[filaActual+1][columnaActual - 1] == '+') {
+                                matriz[filaActual+1][columnaActual - 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Arriba
+                        if ((filaActual - 1 >= 0) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual-1][columnaActual + 1] == '+') {
+                                matriz[filaActual-1][columnaActual + 1] = '#';
+                            }
+                        }
+                        //Diagonal Derecha Abajo
+                        if ((filaActual + 1 < 10) && (columnaActual + 1 <= 10)) {
+                            if (matriz[filaActual + 1][columnaActual + 1] == '+') {
+                                matriz[filaActual + 1][columnaActual + 1] = '#';
+                            }
+                        }
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
