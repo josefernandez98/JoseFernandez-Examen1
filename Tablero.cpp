@@ -52,6 +52,9 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                         filaActual++;
                         filaActual-=espacios;
                         matriz[filaActual][columnaActual] = '+';
+                        //Arriba
+                        
+
                     } else {
                         cout << "No puede saltar piezas. Turno perdido." << endl;
                     }
