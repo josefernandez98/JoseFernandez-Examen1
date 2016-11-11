@@ -18,8 +18,9 @@ Tablero::~Tablero() {
     cout << "Terminando..." << endl;
 }
 
-void Tablero::movimiento(int fila, int columna, int filaActual, int columnaActual, int jugador) {
+void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
     int espacios = 0;
+    int direccion = 0;
     if (jugador == 1) {
         cout << "Cuantos espacios se quiere mover (1 o 2):";
         cin >> espacios;
@@ -30,7 +31,58 @@ void Tablero::movimiento(int fila, int columna, int filaActual, int columnaActua
                 cin >> espacios;
             } while (espacios <= 0 || espacios > 2);
         }//Fin del verificador
+        cout << "Arriba: 1" << endl;
+        cout << "Abajo: 2" << endl;
+        cout << "Izquierda: 3" << endl;
+        cout << "Derecha: 4" << endl;
+        cout << "Diagonal Izquierda Arriba: 5" << endl;
+        cout << "Diagonal Izquierda Abajo: 6" << endl;
+        cout << "Diagonal Derecha Arriba: 7" << endl;
+        cout << "Diagonal Derecha Abajo: 8" << endl;
+        cout << "Ingrese su direccion: ";
+        cin >> direccion;
+        cout << endl;
+        if (direccion == 1) {
+            if (filaActual - espacios < 0) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    filaActual-=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual++;
+                        matriz[filaActual][columnaActual] = ' ';
+                        filaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
 
+                }
+            }
+        }
+        if (direccion == 2) {
+
+        }
+        if (direccion == 3) {
+
+        }
+        if (direccion == 4) {
+
+        }
+        if (direccion == 5) {
+
+        }
+        if (direccion == 6) {
+
+        }
+        if (direccion == 7) {
+
+        }
+        if (direccion == 8) {
+
+        }
     }
     if (jugador == 2) {
         cout << "Cuantos espacios se quiere mover (1 o 2):";
