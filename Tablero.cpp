@@ -30,9 +30,18 @@ void Tablero::movimiento(int fila, int columna, int filaActual, int columnaActua
                 cin >> espacios;
             } while (espacios <= 0 || espacios > 2);
         }//Fin del verificador
+
     }
     if (jugador == 2) {
-
+        cout << "Cuantos espacios se quiere mover (1 o 2):";
+        cin >> espacios;
+        if (espacios <= 0 || espacios > 2) {
+            do {
+                cout << "Valor invalido." << endl;
+                cout << "Cuantos espacios se quiere mover (1 o 2):";
+                cin >> espacios;
+            } while (espacios <= 0 || espacios > 2);
+        }//Fin del verificador
     }
 }//Fin del metodo
 

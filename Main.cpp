@@ -12,6 +12,7 @@ int main(int argc, char const *argv[]) {
     int columna_Actual = 0;
     int fila = 0;
     int columna = 0;
+    int espacios = 0;
     do {
         instancia->imprimir();
         cout << "Jugador " << jugador << ", ingrese la fila en la que esta su pieza:";
@@ -22,14 +23,12 @@ int main(int argc, char const *argv[]) {
         cin >> columna_Actual;
         cout << endl;
         columna_Actual = instancia->verificacionColumna(columna_Actual, fila_Actual, jugador);
-        cout << "Jugador " << jugador << ", ingrese la fila a la que se quiere mover:";
-        cin >> fila;
-        fila = instancia->verificacionFila(fila);
-        cout << endl;
-        cout << "Ingrese la columna en la que esta su pieza:";
-        cin >> columna;
-        cout << endl;
-        columna = instancia->verificacionColumna(columna, fila, jugador);
+
+
+
+
+
+
 
 
         jugador++;
