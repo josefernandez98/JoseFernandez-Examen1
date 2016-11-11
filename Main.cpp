@@ -8,17 +8,30 @@ int main(int argc, char const *argv[]) {
 	instancia->llenar();
     int terminado = 0;
     int jugador = 1;
+    int fila_Actual = 0;
+    int columna_Actual = 0;
     int fila = 0;
     int columna = 0;
     do {
         instancia->imprimir();
-        cout << "Jugador " << jugador << " ingrese la fila:";
-        cin >> fila;
+        cout << "Jugador " << jugador << ", ingrese la fila en la que esta su pieza:";
+        cin >> fila_Actual;
+        fila_Actual = instancia->verificacionFila(fila_Actual);
         cout << endl;
-        cout << "Ingrese la columna:";
-        cin >> fila;
+        cout << "Ingrese la columna en la que esta su pieza:";
+        cin >> columna_Actual;
         cout << endl;
-        
+        columna_Actual = instancia->verificacionColumna(columna_Actual, fila_Actual, jugador);
+        cout << "Jugador " << jugador << ", ingrese la fila a la que se quiere mover:";
+        cin >> fila;
+        fila = instancia->verificacionFila(fila);
+        cout << endl;
+        cout << "Ingrese la columna en la que esta su pieza:";
+        cin >> columna;
+        cout << endl;
+        columna = instancia->verificacionColumna(columna, fila, jugador);
+
+
         jugador++;
         if (jugador > 2) {
             jugador = 1;
