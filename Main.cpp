@@ -23,14 +23,7 @@ int main(int argc, char const *argv[]) {
         cin >> columna_Actual;
         cout << endl;
         columna_Actual = instancia->verificacionColumna(columna_Actual, fila_Actual, jugador);
-
-
-
-
-
-
-
-
+        instancia->movimiento(fila_Actual, columna_Actual, jugador);
         jugador++;
         if (jugador > 2) {
             jugador = 1;

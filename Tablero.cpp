@@ -50,7 +50,6 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                     filaActual-=1;
                     if (matriz[filaActual][columnaActual] == ' ') {
                         filaActual++;
-                        matriz[filaActual][columnaActual] = ' ';
                         filaActual-=espacios;
                         matriz[filaActual][columnaActual] = '+';
                     } else {
@@ -58,31 +57,223 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                     }
                 }
                 if (espacios == 2) {
-
+                    filaActual-=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual+=2;
+                        filaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
                 }
-            }
-        }
+            }//Fin del else
+        }//FIn del if direccion
         if (direccion == 2) {
-
-        }
+            if (filaActual + espacios > 10) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    filaActual+=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual--;
+                        filaActual+=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    filaActual+=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual-=2;
+                        filaActual+=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//Fin de la direccion 2
         if (direccion == 3) {
-
-        }
+            if (columnaActual - espacios < 0) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    columnaActual-=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        columnaActual++;
+                        columnaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    columnaActual-=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        columnaActual+=2;
+                        columnaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//Fin del if direccion 3
         if (direccion == 4) {
-
-        }
+            if (columnaActual + espacios > 10) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    columnaActual+=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        columnaActual--;
+                        columnaActual+=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    columnaActual+=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        columnaActual-=2;
+                        columnaActual+=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//Fin del if direccion 4
         if (direccion == 5) {
-
-        }
+            if ((filaActual - espacios < 0) || (columnaActual - espacios < 0)) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    filaActual-=1;
+                    columnaActual-=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual++;
+                        columnaActual++;
+                        filaActual-=espacios;
+                        columnaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    filaActual-=2;
+                    columnaActual-=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual+=2;
+                        columnaActual+=2;
+                        filaActual-=espacios;
+                        columnaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//Fin del if direccion 5
         if (direccion == 6) {
-
-        }
+            if ((filaActual + espacios > 10) || (columnaActual - espacios < 0)) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    filaActual+=1;
+                    columnaActual-=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual--;
+                        columnaActual++;
+                        filaActual+=espacios;
+                        columnaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    filaActual+=2;
+                    columnaActual-=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual-=2;
+                        columnaActual+=2;
+                        filaActual+=espacios;
+                        columnaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//Fin del if direccion 6
         if (direccion == 7) {
-
-        }
+            if ((filaActual - espacios < 0) || (columnaActual + espacios > 10)) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    filaActual-=1;
+                    columnaActual+=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual++;
+                        columnaActual--;
+                        filaActual-=espacios;
+                        columnaActual+=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    filaActual-=2;
+                    columnaActual+=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual+=2;
+                        columnaActual-=2;
+                        filaActual-=espacios;
+                        columnaActual+=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//Fin del if direccion 7
         if (direccion == 8) {
-
-        }
+            if ((filaActual + espacios > 10) || (columnaActual + espacios > 10)) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    filaActual+=1;
+                    columnaActual+=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual--;
+                        columnaActual--;
+                        filaActual+=1;
+                        columnaActual+=1;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    filaActual+=2;
+                    columnaActual+=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual-=2;
+                        columnaActual-=2;
+                        filaActual+=espacios;
+                        columnaActual+=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//Fin del if direccion 8
     }
     if (jugador == 2) {
         cout << "Cuantos espacios se quiere mover (1 o 2):";
@@ -94,6 +285,249 @@ void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
                 cin >> espacios;
             } while (espacios <= 0 || espacios > 2);
         }//Fin del verificador
+        cout << "Arriba: 1" << endl;
+        cout << "Abajo: 2" << endl;
+        cout << "Izquierda: 3" << endl;
+        cout << "Derecha: 4" << endl;
+        cout << "Diagonal Izquierda Arriba: 5" << endl;
+        cout << "Diagonal Izquierda Abajo: 6" << endl;
+        cout << "Diagonal Derecha Arriba: 7" << endl;
+        cout << "Diagonal Derecha Abajo: 8" << endl;
+        cout << "Ingrese su direccion: ";
+        cin >> direccion;
+        cout << endl;
+        if (direccion == 1) {
+            if (filaActual - espacios < 0) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    filaActual-=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual++;
+                        filaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '#';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    filaActual-=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual+=2;
+                        filaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '#';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//FIn del if direccion
+        if (direccion == 2) {
+            if (filaActual + espacios > 10) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    filaActual+=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual--;
+                        filaActual+=espacios;
+                        matriz[filaActual][columnaActual] = '#';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    filaActual+=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual-=2;
+                        filaActual+=espacios;
+                        matriz[filaActual][columnaActual] = '#';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//Fin de la direccion 2
+        if (direccion == 3) {
+            if (columnaActual - espacios < 0) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    columnaActual-=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        columnaActual++;
+                        columnaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '#';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    columnaActual-=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        columnaActual+=2;
+                        columnaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '#';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//Fin del if direccion 3
+        if (direccion == 4) {
+            if (columnaActual + espacios > 10) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    columnaActual+=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        columnaActual--;
+                        columnaActual+=espacios;
+                        matriz[filaActual][columnaActual] = '#';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    columnaActual+=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        columnaActual-=2;
+                        columnaActual+=espacios;
+                        matriz[filaActual][columnaActual] = '#';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//Fin del if direccion 4
+        if (direccion == 5) {
+            if ((filaActual - espacios < 0) || (columnaActual - espacios < 0)) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    filaActual-=1;
+                    columnaActual-=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual++;
+                        columnaActual++;
+                        filaActual-=espacios;
+                        columnaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '#';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    filaActual-=2;
+                    columnaActual-=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual+=2;
+                        columnaActual+=2;
+                        filaActual-=espacios;
+                        columnaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '#';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//Fin del if direccion 5
+        if (direccion == 6) {
+            if ((filaActual + espacios > 10) || (columnaActual - espacios < 0)) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    filaActual+=1;
+                    columnaActual-=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual--;
+                        columnaActual++;
+                        filaActual+=espacios;
+                        columnaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '#';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    filaActual+=2;
+                    columnaActual-=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual-=2;
+                        columnaActual+=2;
+                        filaActual+=espacios;
+                        columnaActual-=espacios;
+                        matriz[filaActual][columnaActual] = '#';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//Fin del if direccion 6
+        if (direccion == 7) {
+            if ((filaActual - espacios < 0) || (columnaActual + espacios > 10)) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    filaActual-=1;
+                    columnaActual+=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual++;
+                        columnaActual--;
+                        filaActual-=espacios;
+                        columnaActual+=espacios;
+                        matriz[filaActual][columnaActual] = '#';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    filaActual-=2;
+                    columnaActual+=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual+=2;
+                        columnaActual-=2;
+                        filaActual-=espacios;
+                        columnaActual+=espacios;
+                        matriz[filaActual][columnaActual] = '#';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//Fin del if direccion 7
+        if (direccion == 8) {
+            if ((filaActual + espacios > 10) || (columnaActual + espacios > 10)) {
+                cout << "Posicion invalida, pierde su turno." << endl;
+            } else {
+                if (espacios == 1) {
+                    filaActual+=1;
+                    columnaActual+=1;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual--;
+                        columnaActual--;
+                        filaActual+=1;
+                        columnaActual+=1;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+                if (espacios == 2) {
+                    filaActual+=2;
+                    columnaActual+=2;
+                    if (matriz[filaActual][columnaActual] == ' ') {
+                        filaActual-=2;
+                        columnaActual-=2;
+                        filaActual+=espacios;
+                        columnaActual+=espacios;
+                        matriz[filaActual][columnaActual] = '+';
+                    } else {
+                        cout << "No puede saltar piezas. Turno perdido." << endl;
+                    }
+                }
+            }//Fin del else
+        }//Fin del if direccion 8
     }
 }//Fin del metodo
 
