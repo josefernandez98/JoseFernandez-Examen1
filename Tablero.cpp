@@ -23,7 +23,7 @@ Tablero::~Tablero() {
     cout << "Terminando..." << endl;
 }
 
-void Tablero::verificarMatriz() {
+int Tablero::verificarMatriz() {
     int jugador1 = 0;
     int jugador2 = 0;
     int empate = 0;
