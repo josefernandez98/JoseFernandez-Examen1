@@ -2,6 +2,11 @@
 #include "Tablero.h"
 using namespace std;
 
+
+//PUEDE COMERSE A LOS DEMAS
+//SE MUEVE SIN PROBLEAmas
+
+
 Tablero::Tablero() {
     matriz = new char*[11];
     for (int i = 0; i < 11; i++) {
