@@ -24,11 +24,20 @@ int main(int argc, char const *argv[]) {
         cout << endl;
         columna_Actual = instancia->verificacionColumna(columna_Actual, fila_Actual, jugador);
         instancia->movimiento(fila_Actual, columna_Actual, jugador);
-        
+        terminado = instancia->verificarMatriz();
         jugador++;
         if (jugador > 2) {
             jugador = 1;
         }
-    } while (terminado != 1);
+    } while ((terminado != 1) || (terminado != 2) || (terminado != 121));
+    if (terminado == 1) {
+        cout << "Gano el jugador 2." << endl;
+    }
+    if (terminado == 2) {
+        cout << "Gano el jugador 1." << endl;
+    }
+    if (terminado == 121) {
+        cout << "Empate!!" << endl; 
+    }
     return 0;
 }//Fin del main
