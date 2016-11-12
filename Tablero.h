@@ -7,6 +7,7 @@ class Tablero {
     public:
         Tablero();
         void movimiento(int,int, int);
+        int verificarMatriz();
         void llenar();
         void imprimir();
         int verificacionFila(int);

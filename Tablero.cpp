@@ -23,6 +23,36 @@ Tablero::~Tablero() {
     cout << "Terminando..." << endl;
 }
 
+void Tablero::verificarMatriz() {
+    int jugador1 = 0;
+    int jugador2 = 0;
+    int empate = 0;
+    int resultado = 0;
+    for (int i = 0; i < 11; i++) {
+        for (int j = 0; j < 11; j++) {
+            if (matriz[i][j] == '+') {
+                jugador1++;
+            }
+            if (matriz[i][j] == '#') {
+                jugador2++;
+            }
+            if (matriz[i][j] == ' ') {
+                empate++;
+            }
+        }
+    }
+    if (jugador1 == 0) {
+        resultado = 2;
+    }
+    if (jugador2 == 0) {
+        resultado = 1;
+    }
+    if (empate == 121) {
+        resultado = 121;
+    }
+    return resultado;
+}//Fin del meodo
+
 void Tablero::movimiento(int filaActual, int columnaActual, int jugador) {
     int espacios = 0;
     int direccion = 0;
