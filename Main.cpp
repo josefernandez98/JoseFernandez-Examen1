@@ -13,7 +13,7 @@ int main(int argc, char const *argv[]) {
     int fila = 0;
     int columna = 0;
     int espacios = 0;
-    do {
+    for (int i = 0;terminado <= 0; i++) {
         instancia->imprimir();
         cout << "Jugador " << jugador << ", ingrese la fila en la que esta su pieza:";
         cin >> fila_Actual;
@@ -25,19 +25,20 @@ int main(int argc, char const *argv[]) {
         columna_Actual = instancia->verificacionColumna(columna_Actual, fila_Actual, jugador);
         instancia->movimiento(fila_Actual, columna_Actual, jugador);
         terminado = instancia->verificarMatriz();
+        cout << terminado << endl;
         jugador++;
         if (jugador > 2) {
             jugador = 1;
         }
-    } while ((terminado != 1) || (terminado != 2) || (terminado != 121));
+    }//Fin del for
     if (terminado == 1) {
-        cout << "Gano el jugador 2." << endl;
-    }
-    if (terminado == 2) {
         cout << "Gano el jugador 1." << endl;
     }
+    if (terminado == 2) {
+        cout << "Gano el jugador 2." << endl;
+    }
     if (terminado == 121) {
-        cout << "Empate!!" << endl; 
+        cout << "Empate!!" << endl;
     }
     return 0;
 }//Fin del main
